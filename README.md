@@ -14,9 +14,163 @@ Method List
 * return
 ```json
 //Correct
-{status: true}
+{"status": true}
 //Error
-{status: false, errcode: 1 | 3}
+{"status": false, "errcode": 1 | 3}
 ```
 
 #### update
+> Update product structure data
+* molfile - str, require, product structure
+* id - int, require, primary key in your database
+* return
+```json
+//Correct
+{"status": true}
+//Error
+{"status": false, "errcode": 2 | 3}
+```
+
+#### delete
+> Delete product data
+* id - int, require, primary key in your database
+```json
+//Correct
+{"status": true}
+//Error
+{"status": false, "errcode": 2}
+```
+
+#### sub
+> Structure sub search
+* molfile - str, require, product structure
+* page - int, require
+```json
+//Correct
+{
+  "status": true, 
+  "rows": [{
+    "id": "int",
+    "molwt": "float", 
+    "formula": "str"
+  }],
+  "sub": "str",
+  has_next: true | false
+}
+//Error
+{"status": false, "errcode": 3}
+```
+
+#### sim
+> Structure similarity search
+* molfile - str, require, product structure
+* sim - float, require, Range: 0.5 to 0.9
+* page - int, require
+```json
+//Correct
+{
+  "status": true, 
+  "rows": [{
+    "id": "int",
+    "molwt": "float", 
+    "formula": "str"
+  }],
+  "sub": "str",
+  has_next: true | false
+}
+//Error
+{"status": false, "errcode": 3}
+```
+
+#### exact
+* molfile - str, require, product structure
+* page - int, require
+```json
+//Correct
+{
+  "status": true, 
+  "rows": [{
+    "id": "int",
+    "molwt": "float", 
+    "formula": "str"
+  }],
+  "sub": "str",
+  has_next: true | false
+}
+//Error
+{"status": false, "errcode": 3}
+```
+
+#### n2m
+> Name to molfile
+* name - str, require, standard naming of chemical
+```json
+//Correct
+{"status": true, "molfile": "str" | false}
+{status: false, errcode: 3}
+```
+
+#### getImage
+> Get structure image binary data
+* id - int, require, primary key in your database
+* sub - str, optional, highlight structur in image
+> If the response Content-Type is image/png then it is correct, you can output the response data
+```json
+//Error
+{"status": false, "errcode": 2 | 3}
+```
+
+#### molwt
+> Get molecular weight of product
+* id - int, require, primary key in your database
+```json
+//Correct
+{"status": true, "molwt": "float"}
+//Error
+{"status": false, "errcode": 2}
+```
+
+#### formula
+> Get molecular formula of product
+* id - int, require, primary key in your database
+```json
+//Correct
+{"status": true, "formula": "str"}
+//Error
+{"status": false, "errcode": 2}
+```
+
+#### m2s
+> Molfile to smiles
+* molfile - str, require, product structure
+```json
+//Correct
+{"status": true, "smiles": "str"}
+//Error
+{"status": false, "errcode": 3}
+```
+
+#### s2m
+> Smiles to molfile
+* smiles - str, require, product structure
+```json
+//Correct
+{"status": true, "molfile": "str"}
+//Error
+{"status": false, "errcode": 3}
+```
+
+#### smi2img
+> Get image data from smiles
+* smiles - str, require, product structure
+> If the response Content-Type is image/png then it is correct, you can output the response data
+```json
+//Error
+{"status": false, "errcode": 3}
+```
+
+Error Code Description
+------------------------
+* 1 - The id is exists
+* 2 - The id isn't exists
+* 3 - The parameters error, you can get the info from the response json
