@@ -221,3 +221,10 @@ How to sync with my database
 1. Get the id for this product
 1. Use `insert` api
 1. if api success transaction commit else transaction rollback
+
+How to use structure search
+------------------------------
+1. Get molfile from structure editor or other way
+2. Use `sub`, `sim`, `exact` api search
+3. Get the id list from the api result
+4. Use sql `select * from table where id in id_list` in your code
