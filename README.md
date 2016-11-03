@@ -8,6 +8,6 @@ Method List
 ------------
 
 #### insert
-* Insert product structure to api
+> Insert product structure to api
 * molfile: str, require
 * id: int, require, primary key in your database
