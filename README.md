@@ -15,7 +15,6 @@ Method List
 ```json
 //Correct
 {status: true}
-
 //Error
 {status: false, errcode: 1 | 3}
 ```
