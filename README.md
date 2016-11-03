@@ -6,13 +6,8 @@ How to use
 
 Method List
 ------------
+
 #### insert
-
-> Insert product structure to api
-
-**Param**: molfile 
-
-
->> **Param**: id
-
->> **Type**: int
+* Insert product structure to api
+* molfile: str, require
+* id: int, require, primary key in your database
