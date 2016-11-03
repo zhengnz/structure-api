@@ -1,18 +1,17 @@
 # Structure API DOC
 
-### How to use
-
+How to use
+------------
 > POST http://#{host}:#{port}/#{method}/
 
-### Method List
-
+Method List
+------------
 #### insert
 
 > Insert product structure to api
 
->> **Param**: molfile 
+**Param**: molfile 
 
->> **Type**: str
 
 >> **Param**: id
 
