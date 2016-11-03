@@ -88,7 +88,7 @@ Method List
     "formula": "str"
   }],
   "sub": "str",
-  has_next: true | false
+  "has_next": true | false
 }
 //Error
 {"status": false, "errcode": 3}
@@ -109,7 +109,7 @@ Method List
     "formula": "str"
   }],
   "sub": "str",
-  has_next: true | false
+  "has_next": true | false
 }
 //Error
 {"status": false, "errcode": 3}
@@ -128,7 +128,7 @@ Method List
     "formula": "str"
   }],
   "sub": "str",
-  has_next: true | false
+  "has_next": true | false
 }
 //Error
 {"status": false, "errcode": 3}
@@ -140,7 +140,7 @@ Method List
 ```json
 //Correct
 {"status": true, "molfile": "str" | false}
-{status: false, errcode: 3}
+{"status": false, "errcode": 3}
 ```
 
 #### getImage
@@ -207,3 +207,16 @@ Error Code Description
 * 1 - The id is exists
 * 2 - The id isn't exists
 * 3 - The parameters error, you can get the info from the response json
+
+How to sync with my database
+-------------------------------
+> You can use the `insert` api when you create a new product, remeber use sql transaction.
+
+> Delete, update is same as insert action.
+
+* Exam
+1. Transaction Start
+2. Sql - insert into table(...) values (...)
+3. Get the id for this product
+4. Use `insert` api
+5. if api success transaction commit else transaction rollback
