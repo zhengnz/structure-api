@@ -13,8 +13,8 @@ molfile = 'xxxxxx'
 r = request.post(
   url = url % 'insert',
   data = {
-    molfile: molfile,
-    id: 1
+    "molfile": molfile,
+    "id": 1
   }
 )
 print r.json()
@@ -24,8 +24,8 @@ molfile = 'xxxxxx'
 r = request.post(
   url = url % 'sub',
   data = {
-    molfile: molfile,
-    page: 1
+    "molfile": molfile,
+    "page": 1
   }
 })
 print r.json()
