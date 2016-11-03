@@ -31,8 +31,11 @@ r = request.post(
 print r.json()
 ```
 
-> You can get the molfile from structure editor or parse from smiles
-Parse smiles can use the api - s2m
+> You can get the molfile from structure editor or parse from smiles or standard naming of chemical
+
+> Parse smiles can use the api - s2m
+
+> Parse standard naming of chemical can use the api - n2m
 
 Method List
 ------------
