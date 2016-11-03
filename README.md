@@ -7,8 +7,6 @@
 2. **Method List**
 
 * insert
-> Insert product structure to api
 
-| Param | Type | Reqire |
-| molfile | str | Y |
-| id | init | Y |
+> Insert product structure to api
+>> ***Param***: molfile ***Type***: str
