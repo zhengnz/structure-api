@@ -10,4 +10,8 @@
 
 > Insert product structure to api
 
->> ***Param***: molfile ***Type***: str
+>> **Param**: molfile 
+>> **Type**: str
+
+>> **Param**: id
+>> **Type**: int
