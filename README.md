@@ -4,6 +4,36 @@ How to use
 ------------
 > POST http://#{host}:#{port}/#{method}/
 
+```python
+import requests
+url = 'http://127.0.0.1:8000/%s/'
+
+#insert structure
+molfile = 'xxxxxx'
+r = request.post(
+  url = url % 'insert',
+  data = {
+    molfile: molfile,
+    id: 1
+  }
+)
+print r.json()
+
+#sub search
+molfile = 'xxxxxx'
+r = request.post(
+  url = url % 'sub',
+  data = {
+    molfile: molfile,
+    page: 1
+  }
+})
+print r.json()
+```
+
+> You can get the molfile from structure editor or parse from smiles
+Parse smiles can use the api - s2m
+
 Method List
 ------------
 
