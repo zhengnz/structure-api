@@ -214,9 +214,10 @@ How to sync with my database
 
 > Delete, update is same as insert action.
 
-* Exam
-1 Transaction Start
-2 Sql - insert into table(...) values (...)
-3 Get the id for this product
-4 Use `insert` api
-5 if api success transaction commit else transaction rollback
+***Exam***
+
+1. Transaction Start
+1. Sql - insert into table(...) values (...)
+1. Get the id for this product
+1. Use `insert` api
+1. if api success transaction commit else transaction rollback
