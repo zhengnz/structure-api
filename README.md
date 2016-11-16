@@ -116,6 +116,7 @@ Method List
 ```
 
 #### exact
+> Structure exact search
 * molfile - str, require, product structure
 * page - int, require
 ```json
