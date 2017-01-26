@@ -108,7 +108,6 @@ Method List
     "molwt": "float", 
     "formula": "str"
   }],
-  "sub": "str",
   "has_next": true | false
 }
 //Error
@@ -128,7 +127,6 @@ Method List
     "molwt": "float", 
     "formula": "str"
   }],
-  "sub": "str",
   "has_next": true | false
 }
 //Error
